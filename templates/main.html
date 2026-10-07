@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+      :root {
+      --bg: #f7f1f1;
+      --bgMidLite: #ffffff;
+      --bgLite: #292929;
+      --text: #0e0d0d;
+      --radius: 10px;
+    }
+      .dark{
+        --bg: #151515;
+        --bgMidLite: #1e1e1e;
+        --bgLite: #292929;
+        --text: #f5f5f5;
+        --radius: 10px;
+      }
+      *{box-sizing:border-box}
+      body{
+        margin:0;
+        background:var(--bg);
+        color:var(--text);
+        font:14px Arial
+      }
+
+        header{
+            height:60px;
+            padding:15px 30px;
+            border-bottom:1px solid var(--bgLite);
+        }
+
+        nav{
+          display:flex;
+          gap:8px;
+          justify-content:center;
+          padding:15px;
+        }
+        main{
+          margin-right:290px;
+          padding:15px;
+        }
+
+        .question{
+          background:var(--bgMidLite);
+          border:1px solid var(--bgLite);
+          border-radius:10px;
+          padding:20px;
+        }
+
+        .options{
+          display:grid;
+          grid-template-columns:1fr 1fr;
+          gap:15px;
+          margin-top:15px;
+        }
+
+        .option{
+          height:65px;
+          background:var(--bgMidLite);
+          border:1px solid var(--bgLite);
+          border-radius:12px;
+          padding:20px;
+        }
+
+        aside{
+          position:fixed;
+          right:0;top:0;
+          width:280px;height:100%;
+          border-left:1px solid var(--bgLite);
+          padding:20px;
+        }
+
+        footer{
+          position:fixed; 
+          bottom:0;left:0;
+          right:280px;
+          padding:15px;
+          border-top:1px solid var(--bgLite);
+          display:flex;
+          justify-content:flex-end;
+          gap:10px;
+        }
+
+        button{
+          background:var(--bgMidLite);
+          color:var(--text);
+          border:0;
+          border-radius:8px;
+          padding:10px 18px;
+        }
+
+
+        /* wretten by meeee(hexene) */
+        .option:hover{
+          background-color: #0000001f;
+        }
+
+</style>
+
+
+
+
+</head>
+<body>
+
+<header>
+  <b>Logarithms</b>
+  <button onclick="toggleTheme()">Switch theme</button>
+</header>
+
+
+<main>
+
+  <section class="question">
+    <div id="questionInfo">Question information</div>
+    <hr>
+    <div id="question">Question goes here</div>
+  </section>
+
+  <section class="options">
+    <div class="option" data-answer="A">A &nbsp; Answer A</div>
+    <div class="option" data-answer="B">B &nbsp; Answer B</div>
+    <div class="option" data-answer="C">C &nbsp; Answer C</div>
+    <div class="option" data-answer="D">D &nbsp; Answer D</div>
+  </section>
+
+</main>
+
+<aside id="questionMap">
+  <h3>QUESTION MAP</h3>
+  <!-- map goes here -->
+</aside>
+
+<footer>
+  <button id="clear">Clear Response</button>
+  <button id="previous">Previous</button>
+  <button id="next">Next</button>
+</footer>
+
+<script>
+ 
+</script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
