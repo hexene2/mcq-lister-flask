@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Study App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar left-sidebar">
+            <div class="sidebar-header">
+                <h3>Left Sidebar</h3>
+            </div>
+
+            <div class="sidebar-content" id="left-content">
+                <!-- Add your items here -->
+            </div>
+        </aside>
+
+
+
+
+        <main class="main-content" id="main-content">
+
+            {% block content %}
+            {% endblock %}
+            
+        </main>
+
+
+
+
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="sidebar right-sidebar">
+            <div class="sidebar-header">
+                <h3>Right Sidebar</h3>
+            </div>
+
+            <div class="sidebar-content" id="right-content">
+                <!-- Add your items here -->
+            </div>
+        </aside>
+
+    </div>
+
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>

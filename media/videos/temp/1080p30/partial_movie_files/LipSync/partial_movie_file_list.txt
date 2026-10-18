@@ -1,3 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Users/conta/Documents/GitHub/mcq-lister flask/media/videos/temp/1080p30/partial_movie_files/LipSync/336362344_1321205820_223132457.mp4'
-file 'file:C:/Users/conta/Documents/GitHub/mcq-lister flask/media/videos/temp/1080p30/partial_movie_files/LipSync/757880501_1839128356_2056956480.mp4'
