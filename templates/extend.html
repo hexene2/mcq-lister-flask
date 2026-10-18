@@ -5,6 +5,30 @@
 
 {% block content %}
 
+
+<section id="genrateQuestion">
+    <select name="subject" id="subject" class="select">
+        <option value="all">all</option>
+        <option value="maths">Maths</option>
+        <option value="physics">Physics</option>
+        <option value="chemistry">Chemistry</option>
+    </select>
+    
+    <select name="topic" id="topic" class="select">
+        <option value="">Select Topic</option>
+    </select>
+    
+    <select name="elo-range" id="elo-range"  class="select">
+        <option value="">Select Difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+    <button id="nextQuestion">next</button>
+</section>
+
+
+
 <div class="mcq-study-main">
 
     <div class="mcq-study-question">

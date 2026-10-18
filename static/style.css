@@ -35,7 +35,7 @@ a{
 }
 
 button{
-    border: none;
+    border: 1px solid var(--border);
     background: var(--sidebar-bg);
     min-width: 3px;
 }
@@ -223,12 +223,23 @@ body {
 
 li{
     border: 1px solid var(--border);
-    margin: 5px;
     background-color: var(--surface);
     box-sizing: border-box;
     list-style-type: none;
 }
 
+li > a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--text);
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+li > a:hover {
+    background-color: var(--bg-hover);
+}
 .margin10px{
     padding: 10px;
 }
@@ -237,4 +248,38 @@ li :hover {
     /* margin: 20px; */
     background-color: var(--bg-hover);
     border: 1px solid var(--border-hover);
+}
+
+
+select {
+    border: 1px solid var(--border);
+    margin: 5px;
+    padding: 10px;
+    background-color: var(--bg);
+    color: var(--text);
+
+}
+
+select:hover{
+    background-color: var(--bg-hover);
+    border: 1px solid var(--border-hover);
+
+}
+
+
+#nextQuestion:hover{
+    background-color: var(--bg-hover);
+    border: 1px solid var(--border-hover);
+
+}
+
+#nextQuestion{
+    margin: 5px;
+    padding: 10px;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+#genrateQuestion{
+    display: flex;
 }
