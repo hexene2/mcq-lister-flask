@@ -1,9 +1,30 @@
 
 {% extends "base.html" %}
 
-{% block title %}Home | My Study App{% endblock %}
+{% block title %}MCQ Practice{% endblock %}
 
 {% block content %}
-    <h1>Welcome back!</h1>
-    <p>Choose a subject and start studying.</p>
+
+<div class="mcq-study-main">
+
+    <div class="mcq-study-question">
+        What is the derivative of x²?
+    </div>
+
+    <div class="mcq-study-answers">
+        <button class="mcq-study-answer-btn">
+            Answer One: 2x
+        </button>
+
+        <button class="mcq-study-answer-btn">
+            Answer Two: x
+        </button>
+
+        <button class="mcq-study-answer-btn">
+            Answer Three: x³
+        </button>
+    </div>
+
+</div>
+
 {% endblock %}
