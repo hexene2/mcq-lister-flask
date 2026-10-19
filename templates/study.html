@@ -11,14 +11,14 @@
     </select>
     
     <select name="topic" id="topic" class="select">
-        <option value="All">All</option>
+        <option value="Mix">Mix</option>
     </select>
     
     <select name="eloRange" id="eloRange"  class="select">
-        <option value="">all</option>
-        <option value="easy">Easy</option>
-        <option value="medium">Medium</option>
-        <option value="hard">Hard</option>
+        <option value="">Mix</option>
+        <option value="100-500">100-500</option>
+        <option value="500-1500">500-1500</option>
+        <option value="1500-3000">1500-3000</option>
     </select>
     <button id="nextQuestion">next</button>
 </section>
@@ -27,12 +27,12 @@
 
 <div class="mcq-study-main">
 
-    <div class="mcq-study-question">
+    <div class="mcq-study-question" id="QuestionDiv">
         What is the derivative of x²?
     </div>
 
-    <div class="mcq-study-answers">
-        <button class="mcq-study-answer-btn">
+    <div class="mcq-study-answers" id="AnswersDiv">
+        <button class="mcq-study-answer-btn" >
             Answer One: 2x
         </button>
 
@@ -40,6 +40,9 @@
             Answer Two: x
         </button>
 
+        <button class="mcq-study-answer-btn">
+            Answer Three: x³
+        </button>
         <button class="mcq-study-answer-btn">
             Answer Three: x³
         </button>

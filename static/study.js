@@ -19,6 +19,7 @@ fetch("static/data/data.json")
 // eventlistner
 
 function initSelect(){
+    subject.innerHTML = `<option value="Mix">Mix</option>`;
     for (let s = 0; s < Object.keys(Question[0]).length; s++) {
         const whichSubject = Object.keys(Question[0])[s];
         const option = document.createElement("option");
@@ -29,7 +30,7 @@ function initSelect(){
 }
 
 subject.addEventListener("change", ()=>{
-    topic.innerHTML= `<option value="All">All</option>`;
+    topic.innerHTML= `<option value="Mix">Mix</option>`;
     let objTopic = (Question[0][subject.value])
     for (let t = 0; t < Object.keys(objTopic).length; t++) {
         const whichTopic = Object.keys(objTopic)[t];
@@ -43,6 +44,38 @@ subject.addEventListener("change", ()=>{
 
 nextBTN.addEventListener('click', genrateQuestion);
 
+
+
+
+let QuestionDiv = document.getElementById("QuestionDiv")
+let AnswersDiv = document.getElementById("AnswersDiv")
+let AnswersBtns = AnswersDiv.querySelectorAll(".mcq-study-answer-btn")
+
+
+
+
 function genrateQuestion(){
-    console.log("the next btn is pressed")
+    console.log(AnswersBtns);
+    // mathjax or letex will came up here....
+    let tQuestion = selectQuetion()
+    QuestionDiv.innerHTML= tQuestion.question
+    for (let i = 0; i < AnswersBtns.length; i++) {
+        const answer = AnswersBtns[i];
+        answer.innerHTML = tQuestion.answers[i]
+        print(tQuestion.answers[i])
+    }
+    
+
+}
+
+
+
+
+function selectQuetion(){
+    return getRandomElement((Question[0][subject.value][topic.value].questions));
+} 
+
+
+function getRandomElement(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
 }

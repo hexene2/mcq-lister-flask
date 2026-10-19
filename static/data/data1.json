@@ -1,0 +1,224 @@
+
+[
+  {
+    "maths": {
+      "Limits": {
+        "questions": [
+          {
+            "question": "Evaluate lim(x→2) (x + 3).",
+            "elo": 100,
+            "answers":[
+              "3",
+              "5",
+              "2",
+              "6"
+            ],
+            "correctAnswer": "B",
+            "explanation": "Since x + 3 is continuous, substitute x = 2. The result is 2 + 3 = 5."
+          },
+          {
+            "question": "Evaluate lim(x→3) (x² - 9)/(x - 3).",
+            "elo": 500,
+            "answers":[
+              "3",
+              "5",
+              "2",
+              "6"
+            ],
+            "correctAnswer": "B",
+            "explanation": "Factor x² - 9 = (x - 3)(x + 3). Cancel x - 3, then substitute x = 3 to get 6."
+          },
+          {
+            "question": "Evaluate lim(x→0) (sin x)/x, where x is measured in radians.",
+            "elo": 900,
+            "answers":[
+              "3",
+              "5",
+              "2",
+              "6"
+            ],
+            "correctAnswer": "B",
+            "explanation": "This is a standard trigonometric limit: lim(x→0) sin(x)/x = 1."
+          },
+          {
+            "question": "Evaluate lim(x→2) (x² - 4)/(x - 2).",
+            "elo": 1300,
+            "answers":[
+              "3",
+              "5",
+              "2",
+              "6"
+            ],
+            "correctAnswer": "B",
+            "explanation": "Factor x² - 4 = (x - 2)(x + 2). Cancel x - 2 and substitute x = 2 to obtain 4."
+          },
+          {
+            "question": "Evaluate lim(x→0) (√(x + 4) - 2)/x.",
+            "elo": 1800,
+            "answers":[
+              "3",
+              "5",
+              "2",
+              "6"
+            ],
+            "correctAnswer": "B",
+            "explanation": "Multiply the numerator and denominator by √(x + 4) + 2. The expression becomes 1/(√(x + 4) + 2). Substituting x = 0 gives 1/4."
+          }
+        ]
+      },
+      "Matrices": {
+        "questions": []
+      },
+      "Probability": {
+        "questions": []
+      },
+      "Binomial Distribution": {
+        "questions": []
+      },
+      "Continuity": {
+        "questions": []
+      },
+      "Differentiation": {
+        "questions": []
+      },
+      "Integration": {
+        "questions": []
+      }
+    },
+    "chemistry": {
+      "Some Basic Concepts of Chemistry": {
+        "questions": []
+      },
+      "Structure of Atom": {
+        "questions": []
+      },
+      "Chemical Bonding and Molecular Structure": {
+        "questions": []
+      },
+      "Thermodynamics": {
+        "questions": []
+      },
+      "Chemical Equilibrium": {
+        "questions": []
+      },
+      "Solutions": {
+        "questions": []
+      },
+      "Electrochemistry": {
+        "questions": []
+      },
+      "Chemical Kinetics": {
+        "questions": []
+      },
+      "General Organic Chemistry": {
+        "questions": []
+      },
+      "Hydrocarbons": {
+        "questions": []
+      },
+      "Coordination Compounds": {
+        "questions": []
+      },
+      "Amines": {
+        "questions": []
+      },
+      "Biomolecules": {
+        "questions": []
+      }
+    },
+    "physics": {
+      "Units and Measurements": {
+        "questions": []
+      },
+      "Motion in a Straight Line": {
+        "questions": []
+      },
+      "Motion in a Plane": {
+        "questions": []
+      },
+      "Laws of Motion": {
+        "questions": []
+      },
+      "Work, Energy and Power": {
+        "questions": []
+      },
+      "Rotational Motion": {
+        "questions": []
+      },
+      "Gravitation": {
+        "questions": []
+      },
+      "Thermodynamics": {
+        "questions": []
+      },
+      "Oscillations": {
+        "questions": []
+      },
+      "Waves": {
+        "questions": []
+      },
+      "Electrostatics": {
+        "questions": []
+      },
+      "Current Electricity": {
+        "questions": []
+      },
+      "Electromagnetic Induction": {
+        "questions": []
+      },
+      "Ray Optics": {
+        "questions": []
+      },
+      "Wave Optics": {
+        "questions": []
+      },
+      "Modern Physics": {
+        "questions": []
+      },
+      "Semiconductor Electronics": {
+        "questions": []
+      }
+    },
+    "biology": {
+      "The Living World": {
+        "questions": []
+      },
+      "Biological Classification": {
+        "questions": []
+      },
+      "Plant Kingdom": {
+        "questions": []
+      },
+      "Animal Kingdom": {
+        "questions": []
+      },
+      "Cell: The Unit of Life": {
+        "questions": []
+      },
+      "Biomolecules": {
+        "questions": []
+      },
+      "Cell Cycle and Cell Division": {
+        "questions": []
+      },
+      "Human Physiology": {
+        "questions": []
+      },
+      "Human Reproduction": {
+        "questions": []
+      },
+      "Genetics and Evolution": {
+        "questions": []
+      },
+      "Human Health and Disease": {
+        "questions": []
+      },
+      "Biotechnology": {
+        "questions": []
+      },
+      "Ecology and Environment": {
+        "questions": []
+      }
+    }
+  }
+]

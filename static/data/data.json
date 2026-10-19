@@ -1,214 +1,884 @@
-
 [
-  {
-    "maths": {
-      "Limits": {
-        "questions": [
-          {
-            "question": "Evaluate lim(x→2) (x + 3).",
-            "elo": 100,
-            "answer1": "3",
-            "answer2": "5",
-            "answer3": "2",
-            "answer4": "6",
-            "correctAnswer": "B",
-            "explanation": "Since x + 3 is continuous, substitute x = 2. The result is 2 + 3 = 5."
-          },
-          {
-            "question": "Evaluate lim(x→3) (x² - 9)/(x - 3).",
-            "elo": 500,
-            "answer1": "3",
-            "answer2": "6",
-            "answer3": "9",
-            "answer4": "0",
-            "correctAnswer": "B",
-            "explanation": "Factor x² - 9 = (x - 3)(x + 3). Cancel x - 3, then substitute x = 3 to get 6."
-          },
-          {
-            "question": "Evaluate lim(x→0) (sin x)/x, where x is measured in radians.",
-            "elo": 900,
-            "answer1": "0",
-            "answer2": "1",
-            "answer3": "Undefined",
-            "answer4": "-1",
-            "correctAnswer": "B",
-            "explanation": "This is a standard trigonometric limit: lim(x→0) sin(x)/x = 1."
-          },
-          {
-            "question": "Evaluate lim(x→2) (x² - 4)/(x - 2).",
-            "elo": 1300,
-            "answer1": "2",
-            "answer2": "4",
-            "answer3": "0",
-            "answer4": "Undefined",
-            "correctAnswer": "B",
-            "explanation": "Factor x² - 4 = (x - 2)(x + 2). Cancel x - 2 and substitute x = 2 to obtain 4."
-          },
-          {
-            "question": "Evaluate lim(x→0) (√(x + 4) - 2)/x.",
-            "elo": 1800,
-            "answer1": "1/2",
-            "answer2": "1/4",
-            "answer3": "1",
-            "answer4": "0",
-            "correctAnswer": "B",
-            "explanation": "Multiply the numerator and denominator by √(x + 4) + 2. The expression becomes 1/(√(x + 4) + 2). Substituting x = 0 gives 1/4."
-          }
-        ]
-      },
-      "Matrices": {
-        "questions": []
-      },
-      "Probability": {
-        "questions": []
-      },
-      "Binomial Distribution": {
-        "questions": []
-      },
-      "Continuity": {
-        "questions": []
-      },
-      "Differentiation": {
-        "questions": []
-      },
-      "Integration": {
-        "questions": []
-      }
-    },
-    "chemistry": {
-      "Some Basic Concepts of Chemistry": {
-        "questions": []
-      },
-      "Structure of Atom": {
-        "questions": []
-      },
-      "Chemical Bonding and Molecular Structure": {
-        "questions": []
-      },
-      "Thermodynamics": {
-        "questions": []
-      },
-      "Chemical Equilibrium": {
-        "questions": []
-      },
-      "Solutions": {
-        "questions": []
-      },
-      "Electrochemistry": {
-        "questions": []
-      },
-      "Chemical Kinetics": {
-        "questions": []
-      },
-      "General Organic Chemistry": {
-        "questions": []
-      },
-      "Hydrocarbons": {
-        "questions": []
-      },
-      "Coordination Compounds": {
-        "questions": []
-      },
-      "Amines": {
-        "questions": []
-      },
-      "Biomolecules": {
-        "questions": []
-      }
-    },
-    "physics": {
-      "Units and Measurements": {
-        "questions": []
-      },
-      "Motion in a Straight Line": {
-        "questions": []
-      },
-      "Motion in a Plane": {
-        "questions": []
-      },
-      "Laws of Motion": {
-        "questions": []
-      },
-      "Work, Energy and Power": {
-        "questions": []
-      },
-      "Rotational Motion": {
-        "questions": []
-      },
-      "Gravitation": {
-        "questions": []
-      },
-      "Thermodynamics": {
-        "questions": []
-      },
-      "Oscillations": {
-        "questions": []
-      },
-      "Waves": {
-        "questions": []
-      },
-      "Electrostatics": {
-        "questions": []
-      },
-      "Current Electricity": {
-        "questions": []
-      },
-      "Electromagnetic Induction": {
-        "questions": []
-      },
-      "Ray Optics": {
-        "questions": []
-      },
-      "Wave Optics": {
-        "questions": []
-      },
-      "Modern Physics": {
-        "questions": []
-      },
-      "Semiconductor Electronics": {
-        "questions": []
-      }
-    },
-    "biology": {
-      "The Living World": {
-        "questions": []
-      },
-      "Biological Classification": {
-        "questions": []
-      },
-      "Plant Kingdom": {
-        "questions": []
-      },
-      "Animal Kingdom": {
-        "questions": []
-      },
-      "Cell: The Unit of Life": {
-        "questions": []
-      },
-      "Biomolecules": {
-        "questions": []
-      },
-      "Cell Cycle and Cell Division": {
-        "questions": []
-      },
-      "Human Physiology": {
-        "questions": []
-      },
-      "Human Reproduction": {
-        "questions": []
-      },
-      "Genetics and Evolution": {
-        "questions": []
-      },
-      "Human Health and Disease": {
-        "questions": []
-      },
-      "Biotechnology": {
-        "questions": []
-      },
-      "Ecology and Environment": {
-        "questions": []
-      }
+    {
+        "maths": {
+            "Limits": {
+                "questions": [
+                    {
+                        "question": "Evaluate lim(x→2) (x + 3).",
+                        "elo": 100,
+                        "answers": [
+                            "3",
+                            "5",
+                            "2",
+                            "6"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Since x + 3 is continuous, substitute x = 2. The result is 2 + 3 = 5."
+                    },
+                    {
+                        "question": "Evaluate lim(x→3) (x² - 9)/(x - 3).",
+                        "elo": 500,
+                        "answers": [
+                            "3",
+                            "5",
+                            "2",
+                            "6"
+                        ],
+                        "correctAnswer": "D",
+                        "explanation": "Factor x² - 9 = (x - 3)(x + 3). Cancel x - 3, then substitute x = 3 to get 6."
+                    },
+                    {
+                        "question": "Evaluate lim(x→0) (sin x)/x, where x is measured in radians.",
+                        "elo": 900,
+                        "answers": [
+                            "0",
+                            "1",
+                            "Infinity",
+                            "Undefined"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "This is a fundamental trigonometric limit: lim(x→0) sin(x)/x = 1."
+                    },
+                    {
+                        "question": "Evaluate lim(x→2) (x² - 4)/(x - 2).",
+                        "elo": 1300,
+                        "answers": [
+                            "2",
+                            "4",
+                            "0",
+                            "8"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Factor x² - 4 = (x - 2)(x + 2). Cancel x - 2 and substitute x = 2 to obtain 4."
+                    },
+                    {
+                        "question": "Evaluate lim(x→0) (√(x + 4) - 2)/x.",
+                        "elo": 1800,
+                        "answers": [
+                            "1/2",
+                            "1/4",
+                            "0",
+                            "1"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Rationalize numerator by multiplying by (√(x+4)+2). Gives 1/(√(x+4)+2) -> 1/4."
+                    }
+                ]
+            },
+            "Matrices": {
+                "questions": [
+                    {
+                        "question": "What is the determinant of a 2x2 matrix [[a, b], [c, d]]?",
+                        "elo": 300,
+                        "answers": [
+                            "ad + bc",
+                            "ad - bc",
+                            "ab - cd",
+                            "ac - bd"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "The determinant of a 2x2 matrix [[a,b],[c,d]] is calculated as (ad) - (bc)."
+                    },
+                    {
+                        "question": "If matrix A has dimension 3x2 and matrix B has dimension 2x4, what is the dimension of A*B?",
+                        "elo": 600,
+                        "answers": [
+                            "2x2",
+                            "3x4",
+                            "4x3",
+                            "Undefined"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Multiplication of (m x n) and (n x p) matrices yields a matrix of dimension (m x p), so 3x4."
+                    }
+                ]
+            },
+            "Probability": {
+                "questions": [
+                    {
+                        "question": "What is the probability of rolling a sum of 7 with two fair six-sided dice?",
+                        "elo": 400,
+                        "answers": [
+                            "1/12",
+                            "1/6",
+                            "5/36",
+                            "1/4"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "There are 6 favorable outcomes out of 36 possibilities: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1). 6/36 = 1/6."
+                    }
+                ]
+            },
+            "Binomial Distribution": {
+                "questions": [
+                    {
+                        "question": "In a binomial distribution B(n, p), what is the formula for the mean?",
+                        "elo": 500,
+                        "answers": [
+                            "np(1-p)",
+                            "np",
+                            "√(np)",
+                            "n/p"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "The mean (expected value) of a binomial distribution is given by E[X] = n * p."
+                    }
+                ]
+            },
+            "Continuity": {
+                "questions": [
+                    {
+                        "question": "A function f(x) is continuous at x = a if:",
+                        "elo": 400,
+                        "answers": [
+                            "f(a) is undefined",
+                            "lim(x→a) f(x) = f(a)",
+                            "lim(x→a) f(x) does not exist",
+                            "f'(a) exists"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Continuity requires that the limit as x approaches a equals the actual function value f(a)."
+                    }
+                ]
+            },
+            "Differentiation": {
+                "questions": [
+                    {
+                        "question": "What is the derivative of f(x) = x³ - 4x + 7 with respect to x?",
+                        "elo": 300,
+                        "answers": [
+                            "3x² - 4",
+                            "3x² + 7",
+                            "x² - 4",
+                            "3x - 4"
+                        ],
+                        "correctAnswer": "A",
+                        "explanation": "Using power rule: d/dx(x³) = 3x², d/dx(-4x) = -4, d/dx(7) = 0. Result: 3x² - 4."
+                    }
+                ]
+            },
+            "Integration": {
+                "questions": [
+                    {
+                        "question": "What is the indefinite integral of ∫ (2x + 5) dx?",
+                        "elo": 300,
+                        "answers": [
+                            "x² + 5x + C",
+                            "2x² + 5x + C",
+                            "x² + C",
+                            "2 + C"
+                        ],
+                        "correctAnswer": "A",
+                        "explanation": "∫ 2x dx = x² and ∫ 5 dx = 5x. Adding the constant of integration yields x² + 5x + C."
+                    }
+                ]
+            }
+        },
+        "chemistry": {
+            "Some Basic Concepts of Chemistry": {
+                "questions": [
+                    {
+                        "question": "What is the Avogadro constant?",
+                        "elo": 200,
+                        "answers": [
+                            "6.022 × 10²³ mol⁻¹",
+                            "3.00 × 10⁸ m/s",
+                            "1.602 × 10⁻¹⁹ C",
+                            "6.626 × 10⁻³⁴ J s"
+                        ],
+                        "correctAnswer": "A",
+                        "explanation": "Avogadro's constant represents the number of constituent particles per mole, equal to ~6.022 × 10²³."
+                    }
+                ]
+            },
+            "Structure of Atom": {
+                "questions": [
+                    {
+                        "question": "Which quantum number determines the shape of an atomic orbital?",
+                        "elo": 400,
+                        "answers": [
+                            "Principal quantum number (n)",
+                            "Azimuthal quantum number (l)",
+                            "Magnetic quantum number (m)",
+                            "Spin quantum number (s)"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "The azimuthal (or angular momentum) quantum number l determines the subshell and shape of the orbital."
+                    }
+                ]
+            },
+            "Chemical Bonding and Molecular Structure": {
+                "questions": [
+                    {
+                        "question": "What is the geometry of a methane (CH4) molecule?",
+                        "elo": 300,
+                        "answers": [
+                            "Linear",
+                            "Tetrahedral",
+                            "Trigonal planar",
+                            "Octahedral"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "CH4 has sp3 hybridization with 4 bonding pairs and 0 lone pairs, giving it a tetrahedral geometry."
+                    }
+                ]
+            },
+            "Thermodynamics": {
+                "questions": [
+                    {
+                        "question": "According to the First Law of Thermodynamics, ΔU equals:",
+                        "elo": 400,
+                        "answers": [
+                            "q + w",
+                            "q - w",
+                            "q / w",
+                            "w - q"
+                        ],
+                        "correctAnswer": "A",
+                        "explanation": "The change in internal energy ΔU is equal to heat added to the system (q) plus work done on the system (w)."
+                    }
+                ]
+            },
+            "Chemical Equilibrium": {
+                "questions": [
+                    {
+                        "question": "According to Le Chatelier's principle, increasing pressure on a gaseous equilibrium shifts it toward:",
+                        "elo": 500,
+                        "answers": [
+                            "The side with more moles of gas",
+                            "The side with fewer moles of gas",
+                            "The endothermic reaction side",
+                            "No shift occurs"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Increasing pressure shifts equilibrium toward the side with fewer gas molecules to relieve stress."
+                    }
+                ]
+            },
+            "Solutions": {
+                "questions": [
+                    {
+                        "question": "Which of the following is a colligative property?",
+                        "elo": 400,
+                        "answers": [
+                            "Density",
+                            "Osmotic pressure",
+                            "Viscosity",
+                            "Refractive index"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Colligative properties depend only on the number of solute particles, which includes osmotic pressure."
+                    }
+                ]
+            },
+            "Electrochemistry": {
+                "questions": [
+                    {
+                        "question": "In an electrochemical cell, oxidation always occurs at the:",
+                        "elo": 200,
+                        "answers": [
+                            "Cathode",
+                            "Anode",
+                            "Salt bridge",
+                            "Electrolyte"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Anode is the electrode where oxidation (loss of electrons) takes place."
+                    }
+                ]
+            },
+            "Chemical Kinetics": {
+                "questions": [
+                    {
+                        "question": "The unit of the rate constant for a first-order reaction is:",
+                        "elo": 500,
+                        "answers": [
+                            "mol L⁻¹ s⁻¹",
+                            "s⁻¹",
+                            "L mol⁻¹ s⁻¹",
+                            "L² mol⁻² s⁻¹"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "For a first-order reaction, Rate = k[A], so k has dimensions of 1/time (s⁻¹)."
+                    }
+                ]
+            },
+            "General Organic Chemistry": {
+                "questions": [
+                    {
+                        "question": "Which effect is characterized by permanent displacement of sigma electrons along a carbon chain?",
+                        "elo": 400,
+                        "answers": [
+                            "Electromeric effect",
+                            "Inductive effect",
+                            "Mesomeric effect",
+                            "Hyperconjugation"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "The inductive effect involves permanent polarization of sigma bonds due to electronegativity differences."
+                    }
+                ]
+            },
+            "Hydrocarbons": {
+                "questions": [
+                    {
+                        "question": "What type of reaction do alkanes primarily undergo?",
+                        "elo": 300,
+                        "answers": [
+                            "Electrophilic addition",
+                            "Free radical substitution",
+                            "Nucleophilic substitution",
+                            "Nucleophilic addition"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Alkanes are relatively unreactive and undergo substitution reactions via free radical mechanisms (e.g., halogenation)."
+                    }
+                ]
+            },
+            "Coordination Compounds": {
+                "questions": [
+                    {
+                        "question": "In the coordination compound [Fe(CN)6]³⁻, what is the oxidation state of iron?",
+                        "elo": 600,
+                        "answers": [
+                            "+2",
+                            "+3",
+                            "+6",
+                            "-3"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Let x be Fe oxidation state. x + 6(-1) = -3 => x = +3."
+                    }
+                ]
+            },
+            "Amines": {
+                "questions": [
+                    {
+                        "question": "Primary amines react with nitrous acid (HNO2) at low temperature to yield:",
+                        "elo": 600,
+                        "answers": [
+                            "Alcohols/Diazonium salts",
+                            "Amides",
+                            "Esters",
+                            "Ketones"
+                        ],
+                        "correctAnswer": "A",
+                        "explanation": "Aromatic primary amines form stable diazonium salts at 0-5°C, while aliphatic ones form diazonium salts that decompose to alcohols."
+                    }
+                ]
+            },
+            "Biomolecules": {
+                "questions": [
+                    {
+                        "question": "Which of the following linkage connects amino acids in proteins?",
+                        "elo": 200,
+                        "answers": [
+                            "Glycosidic linkage",
+                            "Peptide linkage",
+                            "Phosphodiester linkage",
+                            "Ester linkage"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Proteins are polymers of amino acids linked together by peptide bonds (-CO-NH-)."
+                    }
+                ]
+            }
+        },
+        "physics": {
+            "Units and Measurements": {
+                "questions": [
+                    {
+                        "question": "What is the SI unit of luminous intensity?",
+                        "elo": 100,
+                        "answers": [
+                            "Lumen",
+                            "Candela",
+                            "Lux",
+                            "Watt"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "The candela (cd) is the base SI unit of luminous intensity."
+                    },
+                    {
+                        "question": "what is demensions of N",
+                        "elo": 200,
+                        "answers": [
+                            "[MLT-2]",
+                            "[M0L0T0]",
+                            "[MLT]",
+                            "[M0L2T-2]"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "The candela (cd) is the base SI unit of luminous intensity."
+                    }
+                ]
+            },
+            "Motion in a Straight Line": {
+                "questions": [
+                    {
+                        "question": "The slope of a velocity-time graph represents:",
+                        "elo": 200,
+                        "answers": [
+                            "Displacement",
+                            "Acceleration",
+                            "Speed",
+                            "Force"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Acceleration is defined as dv/dt, which is the slope of the velocity vs time plot."
+                    }
+                ]
+            },
+            "Motion in a Plane": {
+                "questions": [
+                    {
+                        "question": "At what angle of projection is the horizontal range of a projectile maximum?",
+                        "elo": 300,
+                        "answers": [
+                            "30°",
+                            "45°",
+                            "60°",
+                            "90°"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Range R = (u² sin 2θ)/g. R is maximum when sin(2θ) = 1, so 2θ = 90° and θ = 45°."
+                    }
+                ]
+            },
+            "Laws of Motion": {
+                "questions": [
+                    {
+                        "question": "Newton's second law of motion states that force is directly proportional to rate of change of:",
+                        "elo": 200,
+                        "answers": [
+                            "Velocity",
+                            "Linear momentum",
+                            "Acceleration",
+                            "Mass"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "F = dp/dt, where p is linear momentum."
+                    }
+                ]
+            },
+            "Work, Energy and Power": {
+                "questions": [
+                    {
+                        "question": "What is the work done by a force when the displacement is perpendicular to the force?",
+                        "elo": 200,
+                        "answers": [
+                            "Maximum",
+                            "Zero",
+                            "Negative",
+                            "Infinite"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Work W = F * d * cos(θ). When θ = 90°, cos(90°) = 0, so W = 0."
+                    }
+                ]
+            },
+            "Rotational Motion": {
+                "questions": [
+                    {
+                        "question": "The moment of inertia of a solid cylinder of mass M and radius R about its central axis is:",
+                        "elo": 500,
+                        "answers": [
+                            "MR²",
+                            "(1/2)MR²",
+                            "(2/5)MR²",
+                            "(1/12)MR²"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "The moment of inertia of a solid cylinder about its symmetry axis is (1/2) M R²."
+                    }
+                ]
+            },
+            "Gravitation": {
+                "questions": [
+                    {
+                        "question": "How does gravitational acceleration (g) change as you go higher above Earth's surface?",
+                        "elo": 300,
+                        "answers": [
+                            "Increases",
+                            "Decreases",
+                            "Remains constant",
+                            "Becomes zero immediately"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "g = GM / (R + h)², so as altitude h increases, g decreases."
+                    }
+                ]
+            },
+            "Thermodynamics": {
+                "questions": [
+                    {
+                        "question": "In an adiabatic process, which of the following remains constant?",
+                        "elo": 400,
+                        "answers": [
+                            "Temperature",
+                            "No heat exchange (Q = 0)",
+                            "Pressure",
+                            "Volume"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "An adiabatic process is one in which no heat is transferred into or out of the system (dQ = 0)."
+                    }
+                ]
+            },
+            "Oscillations": {
+                "questions": [
+                    {
+                        "question": "The period of a simple pendulum of length L is proportional to:",
+                        "elo": 400,
+                        "answers": [
+                            "L",
+                            "√L",
+                            "L²",
+                            "1/L"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "The period T = 2π √(L/g), meaning T is directly proportional to √L."
+                    }
+                ]
+            },
+            "Waves": {
+                "questions": [
+                    {
+                        "question": "Sound waves in air are an example of:",
+                        "elo": 200,
+                        "answers": [
+                            "Transverse waves",
+                            "Longitudinal waves",
+                            "Electromagnetic waves",
+                            "Torsional waves"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Sound waves travel as longitudinal pressure waves through air."
+                    }
+                ]
+            },
+            "Electrostatics": {
+                "questions": [
+                    {
+                        "question": "Coulomb's Law describes the force between two charges. The force is inversely proportional to:",
+                        "elo": 200,
+                        "answers": [
+                            "Distance r",
+                            "Square of distance (r²)",
+                            "Product of charges",
+                            "Permittivity"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "F = (1 / 4πε₀) * (q1 * q2 / r²), so force varies inversely with r²."
+                    }
+                ]
+            },
+            "Current Electricity": {
+                "questions": [
+                    {
+                        "question": "Ohm's Law is expressed mathematically as:",
+                        "elo": 100,
+                        "answers": [
+                            "P = VI",
+                            "V = IR",
+                            "I = VR",
+                            "R = VI"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Ohm's Law states potential difference V across a conductor is proportional to current I: V = IR."
+                    }
+                ]
+            },
+            "Electromagnetic Induction": {
+                "questions": [
+                    {
+                        "question": "Lenz's Law is a direct consequence of the principle of conservation of:",
+                        "elo": 400,
+                        "answers": [
+                            "Charge",
+                            "Energy",
+                            "Momentum",
+                            "Mass"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Lenz's Law ensures that induced current opposes the change in flux, maintaining energy conservation."
+                    }
+                ]
+            },
+            "Ray Optics": {
+                "questions": [
+                    {
+                        "question": "The focal length of a plane mirror is:",
+                        "elo": 200,
+                        "answers": [
+                            "Zero",
+                            "Infinite",
+                            "Positive 1 m",
+                            "Negative 1 m"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "A plane mirror has no curvature (radius of curvature R = ∞), so its focal length is infinite."
+                    }
+                ]
+            },
+            "Wave Optics": {
+                "questions": [
+                    {
+                        "question": "In Young's double-slit experiment, fringe width β is given by:",
+                        "elo": 600,
+                        "answers": [
+                            "λd / D",
+                            "λD / d",
+                            "dD / λ",
+                            "λ / (dD)"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Fringe width β = λD / d, where D is screen distance and d is slit separation."
+                    }
+                ]
+            },
+            "Modern Physics": {
+                "questions": [
+                    {
+                        "question": "According to Einstein's photoelectric equation, the maximum kinetic energy of emitted photoelectrons depends on:",
+                        "elo": 500,
+                        "answers": [
+                            "Intensity of incident light",
+                            "Frequency of incident light",
+                            "Duration of exposure",
+                            "Angle of incidence"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "KE_max = hf - Φ; it depends on the frequency f of incident light above the threshold frequency."
+                    }
+                ]
+            },
+            "Semiconductor Electronics": {
+                "questions": [
+                    {
+                        "question": "In an n-type semiconductor, the majority charge carriers are:",
+                        "elo": 300,
+                        "answers": [
+                            "Holes",
+                            "Electrons",
+                            "Protons",
+                            "Positive ions"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Doping with pentavalent impurities provides free electrons as the majority carriers in n-type semiconductors."
+                    }
+                ]
+            }
+        },
+        "biology": {
+            "The Living World": {
+                "questions": [
+                    {
+                        "question": "Who is known as the Father of Taxonomy?",
+                        "elo": 100,
+                        "answers": [
+                            "Aristotle",
+                            "Carl Linnaeus",
+                            "Charles Darwin",
+                            "Gregor Mendel"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Carl Linnaeus introduced binomial nomenclature and is considered the father of taxonomy."
+                    }
+                ]
+            },
+            "Biological Classification": {
+                "questions": [
+                    {
+                        "question": "Five-kingdom classification was proposed by:",
+                        "elo": 200,
+                        "answers": [
+                            "Haekel",
+                            "R.H. Whittaker",
+                            "Copeland",
+                            "Linnaeus"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "R.H. Whittaker proposed the 5-kingdom classification system (Monera, Protista, Fungi, Plantae, Animalia) in 1969."
+                    }
+                ]
+            },
+            "Plant Kingdom": {
+                "questions": [
+                    {
+                        "question": "Which group of plants are commonly called 'amphibians of the plant kingdom'?",
+                        "elo": 300,
+                        "answers": [
+                            "Algae",
+                            "Bryophytes",
+                            "Pteridophytes",
+                            "Gymnosperms"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Bryophytes live in soil but require water for sexual reproduction, hence called plant amphibians."
+                    }
+                ]
+            },
+            "Animal Kingdom": {
+                "questions": [
+                    {
+                        "question": "Which phylum is characterized by the presence of a water vascular system?",
+                        "elo": 400,
+                        "answers": [
+                            "Porifera",
+                            "Echinodermata",
+                            "Mollusca",
+                            "Arthropoda"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Echinoderms possess a unique water vascular system used for locomotion, capture, and transport of food."
+                    }
+                ]
+            },
+            "Cell: The Unit of Life": {
+                "questions": [
+                    {
+                        "question": "Which organelle is known as the powerhouse of the cell?",
+                        "elo": 100,
+                        "answers": [
+                            "Ribosome",
+                            "Mitochondria",
+                            "Golgi apparatus",
+                            "Lysosome"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Mitochondria generate cellular energy in the form of ATP through cellular respiration."
+                    }
+                ]
+            },
+            "Biomolecules": {
+                "questions": [
+                    {
+                        "question": "Which base is present in RNA but absent in DNA?",
+                        "elo": 200,
+                        "answers": [
+                            "Adenine",
+                            "Uracil",
+                            "Thymine",
+                            "Guanine"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Uracil replaces thymine in RNA molecules."
+                    }
+                ]
+            },
+            "Cell Cycle and Cell Division": {
+                "questions": [
+                    {
+                        "question": "During which phase of cell division do chromosomes align along the equatorial plate?",
+                        "elo": 300,
+                        "answers": [
+                            "Prophase",
+                            "Metaphase",
+                            "Anaphase",
+                            "Telophase"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "During metaphase, chromosomes align at the metaphase (equatorial) plate."
+                    }
+                ]
+            },
+            "Human Physiology": {
+                "questions": [
+                    {
+                        "question": "What is the structural and functional unit of the human kidney?",
+                        "elo": 200,
+                        "answers": [
+                            "Neuron",
+                            "Nephron",
+                            "Alveolus",
+                            "Hepatocyte"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Nephrons are the microscopic functional units responsible for urine formation in kidneys."
+                    }
+                ]
+            },
+            "Human Reproduction": {
+                "questions": [
+                    {
+                        "question": "Where does fertilization usually take place in the human female reproductive tract?",
+                        "elo": 300,
+                        "answers": [
+                            "Uterus",
+                            "Ampulla of fallopian tube",
+                            "Ovary",
+                            "Cervix"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Fertilization typically occurs in the ampullary region of the Fallopian tube."
+                    }
+                ]
+            },
+            "Genetics and Evolution": {
+                "questions": [
+                    {
+                        "question": "Gregor Mendel conducted his hybridization experiments on which plant?",
+                        "elo": 100,
+                        "answers": [
+                            "Sweet pea",
+                            "Garden pea (Pisum sativum)",
+                            "Mustard plant",
+                            "Sunflower"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Mendel worked on garden peas (Pisum sativum) to deduce the fundamental laws of inheritance."
+                    }
+                ]
+            },
+            "Human Health and Disease": {
+                "questions": [
+                    {
+                        "question": "Malaria is caused by a protozoan belonging to the genus:",
+                        "elo": 200,
+                        "answers": [
+                            "Amoeba",
+                            "Plasmodium",
+                            "Trypanosoma",
+                            "Leishmania"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Malaria is caused by species of Plasmodium parasites transmitted via female Anopheles mosquitoes."
+                    }
+                ]
+            },
+            "Biotechnology": {
+                "questions": [
+                    {
+                        "question": "Which enzyme is commonly known as 'molecular scissors' in recombinant DNA technology?",
+                        "elo": 300,
+                        "answers": [
+                            "DNA Ligase",
+                            "Restriction Endonuclease",
+                            "DNA Polymerase",
+                            "Helicase"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Restriction endonucleases cut DNA at specific sequence sites and are termed molecular scissors."
+                    }
+                ]
+            },
+            "Ecology and Environment": {
+                "questions": [
+                    {
+                        "question": "In an ecological energy pyramid, how much energy is typically transferred from one trophic level to the next higher level?",
+                        "elo": 300,
+                        "answers": [
+                            "1%",
+                            "10%",
+                            "50%",
+                            "90%"
+                        ],
+                        "correctAnswer": "B",
+                        "explanation": "Lindeman's 10% law states that approximately 10% of energy is transferred up each trophic step."
+                    }
+                ]
+            }
+        }
     }
-  }
 ]
