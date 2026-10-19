@@ -11,7 +11,7 @@ def dashboard():
 
 @app.route("/study")
 def study():
-    return render_template("extend.html")
+    return render_template("study.html")
 
 
 @app.route("/edit")

@@ -8,18 +8,14 @@
 
 <section id="genrateQuestion">
     <select name="subject" id="subject" class="select">
-        <option value="all">all</option>
-        <option value="maths">Maths</option>
-        <option value="physics">Physics</option>
-        <option value="chemistry">Chemistry</option>
     </select>
     
     <select name="topic" id="topic" class="select">
-        <option value="">Select Topic</option>
+        <option value="All">All</option>
     </select>
     
-    <select name="elo-range" id="elo-range"  class="select">
-        <option value="">Select Difficulty</option>
+    <select name="eloRange" id="eloRange"  class="select">
+        <option value="">all</option>
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
         <option value="hard">Hard</option>
@@ -51,4 +47,10 @@
 
 </div>
 
+{% endblock %}
+
+
+
+{% block scripts %}
+    <script defer src="{{ url_for('static', filename='study.js') }}"></script>
 {% endblock %}
