@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Study App</title>
+    <title>{% block title %}Studyspace{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     
 </head>
@@ -15,23 +15,23 @@
 
         <!-- LEFT SIDEBAR -->
         <aside class="sidebar left-sidebar">
-            <div class="sidebar-header">
-                <h3>Left Sidebar</h3>
-                <button id="toggleTheme">
+            <div class="sidebar-header baseMP">
+                <h3 class="brand-title"><span class="brand-mark">S</span> Studyspace</h3>
+                <button id="toggleTheme" class="borderNone">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M376-376q-42.5-42.5-42.5-104T376-584.25Q418.5-627 480-627t104.25 42.75Q627-541.5 627-480t-42.75 104Q541.5-333.5 480-333.5T376-376Zm-177-91.5H67.5V-493H199v25.5Zm694 0H761.5V-493H893v25.5Zm-425.5-294V-893H493v131.5h-25.5Zm0 694V-199H493v131.5h-25.5ZM274-670l-80.5-78 17.5-19.5 80 79.5-17 18Zm475 477.5L670-272l16-18.5 80.5 78.5-17.5 19.5ZM670-686l78-80.5 19.5 17.5-79.5 79.5-18-16.5ZM192.5-211l79.5-79.5 16.5 16.5-77 81-19-18Z"/></svg>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M482.91-173.5q-127.74 0-217.08-89.42-89.33-89.42-89.33-217.17 0-112.41 71.02-196.41T425-782h-3q-13.5 28-20.75 58.75T394-660.19q0 112.4 78.46 190.79Q550.92-391 663-391q32.38 0 62.86-7.29 30.48-7.3 58.14-20.71v-3q-20.5 106.46-104.59 177.48t-196.5 71.02Z"/></svg>
 
                 </button>
             </div>
 
-            <div class="sidebar-content" id="left-content">
+            <nav class="sidebar-content" id="left-content" aria-label="Main navigation">
                 <!-- Add your items here -->
-                <li><a href="{{ url_for('study') }}">Study</a></li>
-                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
-                <li><a href="{{ url_for('edit') }}">Edit</a></li>
-                <li><a href="{{ url_for('settings') }}">Settings</a></li>
+                <li class="nav-item hover baseMP baseBorder"><a href="{{ url_for('dashboard') }}"><span>⌂</span> Dashboard</a></li>
+                <li class="nav-item hover baseMP baseBorder"><a href="{{ url_for('study') }}"><span>◎</span> Study</a></li>
+                <li class="nav-item hover baseMP baseBorder"><a href="{{ url_for('edit') }}"><span>＋</span> Edit questions</a></li>
+                <li class="nav-item hover baseMP baseBorder"><a href="{{ url_for('settings') }}"><span>⚙</span> Settings</a></li>
 
-            </div>
+            </nav>
         </aside>
 
 
@@ -50,11 +50,12 @@
 
         <!-- RIGHT SIDEBAR -->
         <aside class="sidebar right-sidebar">
-            <div class="sidebar-header">
-                <h3>Right Sidebar</h3>
+            <div class="sidebar-header ">
+                <h3>YOUR SPACE</h3>
             </div>
 
-            <div class="sidebar-content" id="right-content">
+            <div class="sidebar-content right-content" id="right-content">
+                <p class="muted small">A calm corner for your next study session.</p>
                 <!-- Add your items here -->
             </div>
         </aside>

@@ -7,20 +7,20 @@
 
 
 <section id="genrateQuestion">
-    <select name="subject" id="subject" class="select">
+    <select name="subject" id="subject" class="select baseMP hover baseBorder">
     </select>
     
-    <select name="topic" id="topic" class="select">
+    <select name="topic" id="topic" class="select baseMP baseBorder hover">
         <option value="Mix">Mix</option>
     </select>
     
-    <select name="eloRange" id="eloRange"  class="select">
+    <select name="eloRange" id="eloRange"  class="select baseMP baseBorder hover">
         <option value="">Mix</option>
         <option value="100-500">100-500</option>
         <option value="500-1500">500-1500</option>
         <option value="1500-3000">1500-3000</option>
     </select>
-    <button id="nextQuestion">next</button>
+    <button id="nextQuestion" class="baseMP baseBorder hover">next</button>
 </section>
 
 
@@ -32,18 +32,18 @@
     </div>
 
     <div class="mcq-study-answers" id="AnswersDiv">
-        <button class="mcq-study-answer-btn" >
+        <button class="mcq-study-answer-btn baseBorder hover" >
             Answer One: 2x
         </button>
 
-        <button class="mcq-study-answer-btn">
+        <button class="mcq-study-answer-btn baseBorder hover">
             Answer Two: x
         </button>
 
-        <button class="mcq-study-answer-btn">
+        <button class="mcq-study-answer-btn baseBorder hover">
             Answer Three: x³
         </button>
-        <button class="mcq-study-answer-btn">
+        <button class="mcq-study-answer-btn baseBorder hover">
             Answer Three: x³
         </button>
     </div>
@@ -56,4 +56,5 @@
 
 {% block scripts %}
     <script defer src="{{ url_for('static', filename='study.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='subjectSelect.js') }}"></script>
 {% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Question Editor · Studyspace{% endblock %}
+{% block content %}
+<section class="page-heading"><p class="eyebrow">QUESTION LIBRARY</p><h1>Question editor</h1><p class="muted">Create, review, and save multiple-choice questions.</p></section>
+<section class="panel editor-toolbar">
+    <div class="field compact-field"><label for="subject">Subject</label><select id="subject" name="subject" class="form-control"><option value="">Loading subjects…</option></select></div>
+    <div class="field compact-field"><label for="topic">Topic</label><select id="topic" name="topic" class="form-control"><option value="">Select a subject first</option></select></div>
+    <div class="field compact-field"><label for="questionIndex">Existing question</label><select id="questionIndex" class="form-control"><option value="new">＋ New question</option></select></div>
+    <button type="button" id="newQuestion" class="button-secondary">＋ New</button>
+</section>
+<form id="questionForm" class="panel question-form">
+    <div class="form-section-heading"><span class="step-number">01</span><div><h2>Question</h2><p class="muted small">Write the question exactly as it should appear in practice mode.</p></div></div>
+    <div class="field"><label for="questionText">Question text</label><textarea id="questionText" class="form-control question-input" rows="3" placeholder="Enter your question…" required></textarea></div>
+    <div class="field"><label for="elo">Difficulty (ELO)</label><input id="elo" class="form-control" type="number" min="0" step="1" value="100" required></div>
+    <div class="form-section-heading answers-heading"><span class="step-number">02</span><div><h2>Answer options</h2><p class="muted small">Fill in all four choices, then select the correct answer below.</p></div></div>
+    <div class="options-grid">
+        {% for letter in ['A','B','C','D'] %}<div class="field option-field"><label for="answer{{ letter }}"><span class="option-letter">{{ letter }}</span> Option {{ letter }}</label><input id="answer{{ letter }}" class="form-control answer-input" data-option="{{ loop.index0 }}" type="text" placeholder="Answer {{ letter }}" required></div>{% endfor %}
+    </div>
+    <div class="field correct-field"><label for="correctAnswer">Correct answer</label><select id="correctAnswer" class="form-control" required><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option></select></div>
+    <div class="form-section-heading explanation-heading"><span class="step-number">03</span><div><h2>Explanation</h2><p class="muted small">Explain why the selected answer is correct. Give yourself room to show the steps.</p></div></div>
+    <div class="field"><label for="explanation">Answer explanation</label><textarea id="explanation" class="form-control explanation-input" rows="8" placeholder="Explain the reasoning step by step…" required></textarea></div>
+    <div class="form-footer"><p id="editorStatus" class="muted small" role="status">Changes are saved to your local question JSON when you click Save.</p><div class="form-actions"><button type="button" id="deleteQuestion" class="button-danger" hidden>Delete question</button><button type="submit" id="saveQuestion" class="button-primary">Save question</button></div></div>
+</form>
+{% endblock %}
+{% block scripts %}<script defer src="{{ url_for('static', filename='edit.js') }}"></script>{% endblock %}

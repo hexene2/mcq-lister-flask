@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Dashboard · Studyspace{% endblock %}
+{% block content %}
+<section class="page-heading">
+    <p class="eyebrow">YOUR WORKSPACE</p>
+    <h1>Dashboard</h1>
+    <p class="muted">A little overview of your learning space.</p>
+</section>
+<section class="profile-card panel">
+    <div class="profile-logo" aria-hidden="true">S</div>
+    <div class="profile-copy"><p class="eyebrow">WELCOME BACK</p><h2>Studyspace</h2><p class="muted">Your personal MCQ practice desk</p></div>
+    <a class="button-link" href="{{ url_for('study') }}">Start studying <span aria-hidden="true">↗</span></a>
+</section>
+<section class="dashboard-grid" aria-label="Workspace overview">
+    <article class="panel stat-card"><span class="stat-icon">✦</span><p class="muted">Subjects</p><h2 id="subjectCount">—</h2><p class="small muted">In your question library</p></article>
+    <article class="panel stat-card"><span class="stat-icon">▤</span><p class="muted">Topics</p><h2 id="topicCount">—</h2><p class="small muted">Ready to explore</p></article>
+    <article class="panel stat-card"><span class="stat-icon">✓</span><p class="muted">Questions</p><h2 id="questionCount">—</h2><p class="small muted">Across all topics</p></article>
+</section>
+<section class="panel quick-actions"><div><p class="eyebrow">QUICK ACTIONS</p><h2>Where to next?</h2></div><div class="action-list"><a href="{{ url_for('study') }}"><span class="action-symbol">◎</span><span><strong>Study questions</strong><small class="muted">Practice from your question bank</small></span><span class="action-arrow">↗</span></a><a href="{{ url_for('edit') }}"><span class="action-symbol">＋</span><span><strong>Edit question bank</strong><small class="muted">Add or update questions and explanations</small></span><span class="action-arrow">↗</span></a><a href="{{ url_for('settings') }}"><span class="action-symbol">⚙</span><span><strong>Settings</strong><small class="muted">Your app preferences, when you're ready</small></span><span class="action-arrow">↗</span></a></div></section>
+{% endblock %}
+{% block scripts %}<script defer src="{{ url_for('static', filename='dashboard.js') }}"></script>{% endblock %}
