@@ -9,32 +9,29 @@ fetch('/api/questions')
         if (!response.ok) throw new Error('Could not load question data');
         return response.json();
     })
-    .then(data => { Question = data; initSelect(); })
+    .then(data => { Question = data; renderSubjects(); })
     .catch(error => console.error(error));
 
-function initSelect() {
-    subject.innerHTML = '<option value="Mix">Mix</option>';
-    Object.keys(Question[0]).forEach(name => {
-        const option = document.createElement('option');
-        option.value = name;
-        option.textContent = name;
-        subject.appendChild(option);
-    });
-    renderTopics();
-}
-
-function renderTopics() {
-    topic.innerHTML = '<option value="Mix">Mix</option>';
-    const subjectData = subject.value === 'Mix' ? Question[0] : (Question[0][subject.value] || {});
-    const names = new Set();
-    Object.values(subjectData).forEach(value => Object.keys(value || {}).forEach(name => names.add(name)));
-    names.forEach(name => {
-        const option = document.createElement('option');
-        option.value = name;
-        option.textContent = name;
-        topic.appendChild(option);
+function renderSubjects() {
+    console.log("this is the Question" ,Question[0])
+    subject.innerHTML = `<option value="Mix">Mix</option>`
+    Object.keys(Question[0]).forEach(i => {
+        let option = document.createElement("option");
+        option.value= i;
+        option.innerText = i;
+        subject.appendChild(option)
     });
 }
 
-subject.addEventListener('change', renderTopics);
+
+subject.addEventListener("change",() =>{
+    topic.innerHTML = `<option value="Mix">Mix</option>`
+    Object.keys(Question[0][subject.value]).forEach(i => {
+        let option = document.createElement("option");
+        option.value= i;
+        option.innerText = i;
+        topic.appendChild(option)
+    })
+})
+// subject.addEventListener('change', renderTopics);
 if (nextBTN) nextBTN.addEventListener('click', genrateQuestion);

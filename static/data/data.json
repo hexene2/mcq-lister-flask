@@ -548,8 +548,6 @@
                         "question": "Evaluate lim(x→0) (√(x + 4) - 2)/x."
                     },
                     {
-                        "question": "this is the eqn that i have added",
-                        "elo": 121,
                         "answers": [
                             "1",
                             "2",
@@ -557,7 +555,9 @@
                             "4"
                         ],
                         "correctAnswer": "B",
-                        "explanation": "b cuz this is my turn"
+                        "elo": 121,
+                        "explanation": "b cuz this is my turn",
+                        "question": "this is the eqn that i have added"
                     }
                 ]
             },
@@ -888,6 +888,24 @@
                         "elo": 200,
                         "explanation": "Work W = F * d * cos(θ). When θ = 90°, cos(90°) = 0, so W = 0.",
                         "question": "What is the work done by a force when the displacement is perpendicular to the force?"
+                    }
+                ]
+            }
+        },
+        "the subject is files": {
+            "hehe": {
+                "questions": [
+                    {
+                        "question": "this sith files",
+                        "elo": 101,
+                        "answers": [
+                            "a",
+                            "a",
+                            "b",
+                            "a"
+                        ],
+                        "correctAnswer": "A",
+                        "explanation": "aaaaaaaa"
                     }
                 ]
             }

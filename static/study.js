@@ -9,33 +9,20 @@ let AnswersDiv = document.getElementById("AnswersDiv")
 let AnswersBtns = AnswersDiv.querySelectorAll(".mcq-study-answer-btn")
 
 
-
-
 function genrateQuestion(){
-    console.log(AnswersBtns);
-    // mathjax or letex will came up here....
-    let tQuestion = selectQuetion()
-    QuestionDiv.innerHTML= tQuestion.question
+    let Question = getQuestion()
+
+    QuestionDiv.innerHTML=Question.question;
     for (let i = 0; i < AnswersBtns.length; i++) {
-        const answer = AnswersBtns[i];
-        answer.innerHTML = tQuestion.answers[i]
-        print(tQuestion.answers[i])
+        const element = AnswersBtns[i];
+        element.innerHTML = Question.answers[i];
     }
     
-
 }
 
-
-
-
-function selectQuetion(){
-    const subjectData = subject.value === "Mix" ? Question[0] : Question[0][subject.value];
-    const topicData = topic.value === "Mix" ? Object.values(subjectData).flatMap(item => item.questions || []) : (subjectData?.[topic.value]?.questions || []);
-    const available = topicData.length ? topicData : Object.values(Question[0]).flatMap(item => Object.values(item).flatMap(t => t.questions || []));
-    return getRandomElement(available);
-} 
-
-
-function getRandomElement(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
+function getQuestion(){
+    if (!(subject.value =="Mix") && !(topic.value =="Mix")){
+        let arr = (Question[0][subject.value][topic.value]).questions;
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
 }
