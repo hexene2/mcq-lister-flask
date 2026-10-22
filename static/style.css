@@ -9,6 +9,7 @@
     --accent: #9b8cff;
     --bg-hover: #dedee8;
     --border-hover: #9b8cff;
+    --radius : 0px;
 }
 
 
@@ -23,6 +24,8 @@
     --accent: #9b8cff;
     --bg-hover: #302b43;
     --border-hover: #9b8cff;
+    --radius : 0px;
+
 }
 
 
@@ -41,7 +44,7 @@
     padding: 10px;
 }
 
-.baseBorder { border: 1px solid var(--border); border-radius: 9px; }
+.baseBorder { border: 1px solid var(--border); }
 .borderNone { border: 0; background: transparent; }
 .width100 { width: 100%; }
 .baseText { color: var(--text); }
@@ -68,6 +71,8 @@ button{
     background: var(--sidebar-bg);
     min-width: 3px;
     color: var(--text);
+    border-radius: 40px;
+
 
 }
 
@@ -193,10 +198,6 @@ button{
     font-size: 16px;
     text-align: left;
     cursor: pointer;
-
-    transition:
-        background 0.2s ease,
-        border-color 0.2s ease;
 }
 
 /* Hover effect */
@@ -285,8 +286,10 @@ input{
 }
 
 
-/* Shared layout and reusable controls */
-:root { --radius: 14px; --radius-sm: 9px; --space: 16px; }
+Shared layout and reusable controls
+:root { --radius: 0px; --radius-sm: 0px; --space: 0-px; }
+
+
 body { min-height: 100vh; }
 button, input, select, textarea { font: inherit; }
 button { border-radius: var(--radius-sm); cursor: pointer; }
@@ -297,7 +300,7 @@ button:disabled { opacity: .65; cursor: wait; }
 .left-sidebar { border-right: 1px solid var(--border); }
 .right-sidebar { border-left: 1px solid var(--border); }
 .brand-title { display: flex; align-items: center; gap: 10px; }
-.brand-mark, .profile-logo { display: inline-grid; place-items: center; background: var(--accent); color: #17131f; font-weight: 800; border-radius: 11px; }
+.brand-mark, .profile-logo { display: inline-grid; place-items: center; background: var(--accent); color: #17131f; font-weight: 800; border-radius: var(--radius) }
 .brand-mark { width: 30px; height: 30px; }
 .nav-item { list-style: none; padding: 0; border-color: transparent; border-radius: var(--radius-sm); }
 .nav-item a { display: flex; align-items: center; gap: 11px; padding: 10px 12px; font-size: 14px; }
@@ -322,17 +325,17 @@ button:disabled { opacity: .65; cursor: wait; }
 .button-danger { color: #e26f79; background: transparent; border-color: #b64e5b; }
 .dashboard-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-bottom: 18px; }
 .stat-card { min-width: 0; }
-.stat-icon { display: inline-grid; place-items: center; width: 32px; height: 32px; margin-bottom: 14px; border-radius: 10px; color: var(--accent); background: var(--bg-hover); }
+.stat-icon { display: inline-grid; place-items: center; width: 32px; height: 32px; margin-bottom: 14px; border-radius: var(--radius); color: var(--accent); background: var(--bg-hover); }
 .stat-card h2 { margin: 5px 0; font-size: 30px; }
 .quick-actions h2 { margin-top: 5px; }
 .action-list { margin-top: 12px; }
 .action-list a { display: flex; align-items: center; gap: 13px; padding: 15px 0; border-top: 1px solid var(--border); color: var(--text); text-decoration: none; }
 .action-list a > span:nth-child(2) { display: grid; gap: 4px; flex: 1; }
 .action-list small { font-size: 12px; }
-.action-symbol { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 11px; background: var(--bg-hover); color: var(--accent); }
+.action-symbol { display: grid; place-items: center; width: 36px; height: 36px; border-radius: var(--radius); background: var(--bg-hover); color: var(--accent); }
 .action-arrow { color: var(--text-muted); }
 .empty-settings { min-height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 10px; }
-.empty-settings-icon { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 16px; background: var(--bg-hover); color: var(--accent); font-size: 25px; }
+.empty-settings-icon { display: grid; place-items: center; width: 54px; height: 54px; border-radius: var(--radius); background: var(--bg-hover); color: var(--accent); font-size: 25px; }
 
 /* Question editor */
 .editor-toolbar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) auto; gap: 12px; align-items: end; margin-bottom: 18px; }
@@ -346,10 +349,10 @@ textarea.form-control { resize: vertical; line-height: 1.6; }
 .explanation-input { min-height: 200px; }
 .form-section-heading { display: flex; align-items: flex-start; gap: 12px; margin: 3px 0 20px; }
 .form-section-heading h2 { font-size: 17px; margin: 1px 0 5px; }
-.step-number { display: grid; place-items: center; width: 30px; height: 30px; flex: 0 0 30px; border-radius: 9px; color: var(--accent); background: var(--bg-hover); font-size: 12px; font-weight: 800; }
+.step-number { display: grid; place-items: center; width: 30px; height: 30px; flex: 0 0 30px; border-radius: var(--radius); color: var(--accent); background: var(--bg-hover); font-size: 12px; font-weight: 800; }
 .answers-heading, .explanation-heading { padding-top: 22px; border-top: 1px solid var(--border); }
 .options-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; }
-.option-letter { display: inline-grid; place-items: center; width: 22px; height: 22px; margin-right: 5px; border-radius: 6px; color: var(--accent); background: var(--bg-hover); }
+.option-letter { display: inline-grid; place-items: center; width: 22px; height: 22px; margin-right: 5px; border-radius: var(--radius); color: var(--accent); background: var(--bg-hover); }
 .correct-field { max-width: 240px; }
 .form-footer { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding-top: 18px; border-top: 1px solid var(--border); }
 .form-actions { display: flex; gap: 9px; }
@@ -374,4 +377,30 @@ textarea.form-control { resize: vertical; line-height: 1.6; }
     .form-footer { align-items: flex-start; flex-direction: column; }
     .form-actions { width: 100%; }
     .form-actions button { flex: 1; }
+}
+
+
+
+*{
+    border-radius: 0;
+}
+
+.mcq-study-nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.mcq-study-nav button{
+    height: 100%;
+    width: 100%;
+}
+
+
+#explanationBox{
+    display: none;
+    margin-top: 10px;
+    padding: 15px 18px;
 }

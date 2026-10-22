@@ -13,7 +13,6 @@ fetch('/api/questions')
     .catch(error => console.error(error));
 
 function renderSubjects() {
-    console.log("this is the Question" ,Question[0])
     subject.innerHTML = `<option value="Mix">Mix</option>`
     Object.keys(Question[0]).forEach(i => {
         let option = document.createElement("option");

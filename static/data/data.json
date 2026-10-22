@@ -896,8 +896,6 @@
             "hehe": {
                 "questions": [
                     {
-                        "question": "this sith files",
-                        "elo": 101,
                         "answers": [
                             "a",
                             "a",
@@ -905,7 +903,25 @@
                             "a"
                         ],
                         "correctAnswer": "A",
-                        "explanation": "aaaaaaaa"
+                        "elo": 101,
+                        "explanation": "aaaaaaaa",
+                        "question": "this sith files"
+                    }
+                ]
+            },
+            "trying": {
+                "questions": [
+                    {
+                        "question": "this is the qn with long explanation",
+                        "elo": 1000,
+                        "answers": [
+                            "lo",
+                            "la",
+                            "le",
+                            "lu"
+                        ],
+                        "correctAnswer": "A",
+                        "explanation": "lu due to the working of bla bla bla\nLorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur adipisci cupiditate, nostrum \n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur adipisci cupiditate, nostrum \n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur adipisci cupiditate, nostrum \n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur adipisci cupiditate, nostrum \nLorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eveniet, minus adipisci sint non aspernatur itaque, magnam aliquid quod dolores repudiandae, vel rerum a incidunt ad enim saepe consequatur veritatis!\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eveniet, minus adipisci sint non aspernatur itaque, magnam aliquid quod dolores repudiandae, vel rerum a incidunt ad enim saepe consequatur veritatis!\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eveniet, minus adipisci sint non aspernatur itaque, magnam aliquid quod dolores repudiandae, vel rerum a incidunt ad enim saepe consequatur veritatis!\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eveniet, minus adipisci sint non aspernatur itaque, magnam aliquid quod dolores repudiandae, vel rerum a incidunt ad enim saepe consequatur veritatis!"
                     }
                 ]
             }
